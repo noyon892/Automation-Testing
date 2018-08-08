@@ -1,0 +1,21 @@
+c:\users\pc\documents\visual studio 2015\Projects\Estore\Estore\bin\Debug\Estore.exe.config
+c:\users\pc\documents\visual studio 2015\Projects\Estore\Estore\bin\Debug\Estore.exe
+c:\users\pc\documents\visual studio 2015\Projects\Estore\Estore\bin\Debug\Estore.pdb
+c:\users\pc\documents\visual studio 2015\Projects\Estore\Estore\bin\Debug\WebDriver.dll
+c:\users\pc\documents\visual studio 2015\Projects\Estore\Estore\bin\Debug\WebDriver.Support.dll
+c:\users\pc\documents\visual studio 2015\Projects\Estore\Estore\bin\Debug\WebDriver.xml
+c:\users\pc\documents\visual studio 2015\Projects\Estore\Estore\bin\Debug\WebDriver.Support.xml
+c:\users\pc\documents\visual studio 2015\Projects\Estore\Estore\obj\Debug\Estore.csprojResolveAssemblyReference.cache
+c:\users\pc\documents\visual studio 2015\Projects\Estore\Estore\obj\Debug\Estore.exe
+c:\users\pc\documents\visual studio 2015\Projects\Estore\Estore\obj\Debug\Estore.pdb
+H:\Study\SQT\Automation\Estore\Estore\bin\Debug\Estore.exe.config
+H:\Study\SQT\Automation\Estore\Estore\bin\Debug\Estore.exe
+H:\Study\SQT\Automation\Estore\Estore\bin\Debug\Estore.pdb
+H:\Study\SQT\Automation\Estore\Estore\bin\Debug\WebDriver.dll
+H:\Study\SQT\Automation\Estore\Estore\bin\Debug\WebDriver.Support.dll
+H:\Study\SQT\Automation\Estore\Estore\bin\Debug\WebDriver.xml
+H:\Study\SQT\Automation\Estore\Estore\bin\Debug\WebDriver.Support.xml
+H:\Study\SQT\Automation\Estore\Estore\obj\Debug\Estore.csprojResolveAssemblyReference.cache
+H:\Study\SQT\Automation\Estore\Estore\obj\Debug\Estore.csproj.CoreCompileInputs.cache
+H:\Study\SQT\Automation\Estore\Estore\obj\Debug\Estore.exe
+H:\Study\SQT\Automation\Estore\Estore\obj\Debug\Estore.pdb
