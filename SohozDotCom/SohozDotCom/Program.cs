@@ -1,0 +1,337 @@
+﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Interactions;
+using System;
+
+
+namespace ShohozDotCom
+{
+    class Program
+    {
+        static string url = "https://www.shohoz.com/";
+        static public IWebDriver driver = new ChromeDriver();
+        static string expectedTitle = "Buy Bus Tickets Online | Bus Tickets | Shohoz.com";
+
+        static void Main(string[] args)
+        {
+            //Home title testing
+            /*if (TC_titleCheck())
+            {
+                Console.WriteLine("Automation Testing of Title Check for home is Pass ");
+            }else
+            {
+                Console.WriteLine("Automation Testing of Title check for home is Fail ");
+            }
+            //Launch Testing
+            if (TC_titleCheck_launch())
+            {
+                Console.WriteLine("Automation Testing of Title for Launch is Pass ");
+            }
+            else
+            {
+                Console.WriteLine("Automation Testing of Title for Launch is Fail ");
+            }
+            //Events testing
+            if (TC_titleCheck_event())
+            {
+                Console.WriteLine("Automation Testing of Title for Events is Pass ");
+            }
+            else
+            {
+                Console.WriteLine("Automation Testing of Title for Events is Fail ");
+            }
+            //Movies testing
+            if (TC_titleCheck_movies())
+            {
+                Console.WriteLine("Automation Testing of Title for Movies is Pass ");
+            }
+            else
+            {
+                Console.WriteLine("Automation Testing of Title for Movies is Fail ");
+            }*/
+
+            //TC_linkCheck_bKash();
+
+            //TC_btnCheck_searchBuses();
+
+            //TC_linkCheck_searchBuses();
+
+            //TC_linkCheck_launch();
+
+            //TC_allHref();
+
+            //TC_linkCheck_rides();
+
+            //TC_linkCheck_cancelTicket();
+            //TC_linkCheck_reservation();
+            //TC_linkCheck_contact();
+
+            TC_loginCheck();
+
+        }
+
+        static bool TC_titleCheck()
+        {
+            driver.Navigate().GoToUrl(url);
+            string actualTitle = driver.Title;
+            driver.Manage().Window.Maximize();
+            if (expectedTitle == actualTitle)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+        static bool TC_titleCheck_launch()
+        {
+            string launchTitle = "Buy Launch Tickets Online | Shohoz.com";
+            driver.Navigate().GoToUrl(url);
+            IWebElement clickOnlaunch = driver.FindElement(By.CssSelector(".fa.fa-ship"));
+            Actions action = new Actions(driver);
+            action.MoveToElement(clickOnlaunch);
+
+            if (driver.FindElement(By.LinkText("Launch")).Displayed)
+            {
+                driver.FindElement(By.LinkText("Launch")).Click();
+            }
+            else
+                Console.WriteLine("Not working");
+            //driver.Navigate().GoToUrl(url);
+            string actualTitle = driver.Title;
+
+            if (launchTitle == actualTitle)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
+        static bool TC_titleCheck_event()
+        {
+            string eventTitle = "Event Tickets | Concert Tickets | Shohoz.com";
+            driver.Navigate().GoToUrl(url);
+            driver.Manage().Window.Maximize();
+            if (driver.FindElement(By.LinkText("Events")).Displayed)
+            {
+                driver.FindElement(By.LinkText("Events")).Click();
+            }
+            else
+                Console.WriteLine("Not working");
+            //driver.Navigate().GoToUrl(url);
+            string actualTitle = driver.Title;
+
+            if (eventTitle == actualTitle)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+        static bool TC_titleCheck_movies()
+        {
+            string movieTitle = "Movie Tickets | Shohoz.com";
+            driver.Navigate().GoToUrl(url);
+            driver.Manage().Window.Maximize();
+            if (driver.FindElement(By.LinkText("Movies")).Displayed)
+            {
+                driver.FindElement(By.LinkText("Movies")).Click();
+            }
+            else
+                Console.WriteLine("Not working");
+            //driver.Navigate().GoToUrl(url);
+            string actualTitle = driver.Title;
+
+            if (movieTitle == actualTitle)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
+        static void TC_linkCheck_bKash()
+        {
+            driver.Navigate().GoToUrl(url);
+            driver.Manage().Window.Maximize();
+            if (driver.FindElement(By.LinkText("Verify bKash/ Print")).Displayed)
+            {
+                driver.FindElement(By.LinkText("Verify bKash/ Print")).Click();
+            }
+            else
+            {
+                Console.WriteLine("not working");
+            }
+
+        }
+
+        static void TC_btnCheck_searchBuses()
+        {
+            driver.Navigate().GoToUrl(url);
+            driver.Manage().Window.Maximize();
+            driver.FindElement(By.Id("dest_from")).SendKeys("Dhaka");
+            driver.FindElement(By.Id("dest_to")).SendKeys("Khulna");
+            driver.FindElement(By.Id("doj")).SendKeys("18-Apr-2018" + Keys.Enter);
+
+            //IWebElement searchBusses = driver.FindElement(By.CssSelector(".glyphicon.glyphicon-search"));
+            //Actions action = new Actions(driver);
+            //action.MoveToElement(searchBusses).Perform();
+            Console.WriteLine("Enter key not working.");
+        }
+
+        static void TC_linkCheck_searchBuses()
+        {
+            driver.Navigate().GoToUrl(url);
+            driver.Manage().Window.Maximize();
+            IWebElement clickOnBus = driver.FindElement(By.CssSelector(".fa.fa-bus"));
+            Actions action = new Actions(driver);
+            action.MoveToElement(clickOnBus);
+
+            if (driver.FindElement(By.LinkText("Buses")).Displayed)
+            {
+                driver.FindElement(By.LinkText("Buses")).Click();
+            }
+            else
+                Console.WriteLine("Not working");
+
+            driver.FindElement(By.Id("dest_from")).SendKeys("Dhaka");
+            driver.FindElement(By.Id("dest_to")).SendKeys("Khulna");
+            driver.FindElement(By.Id("doj")).SendKeys("18-Apr-2018" + Keys.Enter);
+            Console.WriteLine("enter key not working");
+
+
+
+        }
+        static void TC_linkCheck_launch()
+        {
+            driver.Navigate().GoToUrl(url);
+            driver.Manage().Window.Maximize();
+            IWebElement clickOnlaunch = driver.FindElement(By.CssSelector(".fa.fa-ship"));
+            Actions action = new Actions(driver);
+            action.MoveToElement(clickOnlaunch);
+
+            if (driver.FindElement(By.LinkText("Launch")).Displayed)
+            {
+                driver.FindElement(By.LinkText("Launch")).Click();
+            }
+            else
+                Console.WriteLine("Not working");
+
+            driver.FindElement(By.Id("dest_from")).SendKeys("Dhaka");
+            driver.FindElement(By.Id("dest_to")).SendKeys("Khulna");
+            driver.FindElement(By.Id("doj")).SendKeys("18-Apr-2018" + Keys.Enter);
+            
+            Console.WriteLine("enter key not working");
+        }
+
+        static void TC_allHref()
+        {
+            driver.Navigate().GoToUrl(url);
+            foreach(var item in driver.FindElements(By.TagName("a")))
+            {
+                Console.WriteLine(item.GetAttribute("href"));
+            }
+        }
+
+        static void TC_linkCheck_rides()
+        {
+            driver.Navigate().GoToUrl(url);
+            if (driver.FindElement(By.LinkText("Rides")).Displayed)
+            {
+                driver.FindElement(By.LinkText("Rides")).Click();
+                Console.WriteLine("rides link working...");
+            }
+            else
+            {
+                Console.WriteLine("not working");
+            }
+
+        }
+
+        static void TC_linkCheck_cancelTicket()
+        {
+            driver.Navigate().GoToUrl(url);
+
+            if (driver.FindElement(By.LinkText("Cancel Ticket")).Displayed)
+            {
+                driver.FindElement(By.LinkText("Cancel Ticket")).Click();
+            }
+            else
+            {
+                Console.WriteLine("not working");
+            }
+
+        }
+
+        static void TC_linkCheck_reservation()
+        {
+            driver.Navigate().GoToUrl(url);
+
+            if (driver.FindElement(By.LinkText("Bus Reservation")).Displayed)
+            {
+                driver.FindElement(By.LinkText("Bus Reservation")).Click();
+            }
+            else
+            {
+                Console.WriteLine("not working");
+            }
+
+        }
+        static void TC_linkCheck_contact()
+        {
+            driver.Navigate().GoToUrl(url);
+
+            if (driver.FindElement(By.LinkText("Contact Us")).Displayed)
+            {
+                driver.FindElement(By.LinkText("Contact Us")).Click();
+            }
+            else
+            {
+                Console.WriteLine("not working");
+            }
+
+        }
+        static void TC_loginCheck()
+        {
+            driver.Navigate().GoToUrl(url);
+            driver.Manage().Window.Maximize();
+
+            if (driver.FindElement(By.LinkText("Log In (optional)")).Displayed)
+            {
+                driver.FindElement(By.LinkText("Log In (optional)")).Click();
+                Console.WriteLine("link work...");
+                driver.FindElement(By.Id("mobile")).SendKeys("01701884413");
+                driver.FindElement(By.Id("pass")).SendKeys("01701884413");
+                //driver.FindElement(By.ClassName("btn btn-default btn-sm btn-block")).Click();
+                if (driver.FindElement(By.LinkText("Shohoz Login")).Displayed)
+                {
+                    driver.FindElement(By.LinkText("Shohoz Login")).Click();
+                    Console.WriteLine("Succesful automation login");
+                }
+                else
+                {
+                    Console.WriteLine("Login not successful");
+                }
+
+            }
+            else
+            {
+                Console.WriteLine("not working");
+            }
+
+        }
+
+    }
+}

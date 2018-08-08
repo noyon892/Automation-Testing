@@ -1,0 +1,10 @@
+c:\users\islam\documents\visual studio 2015\Projects\SohozDotCom\SohozDotCom\bin\Debug\SohozDotCom.exe.config
+c:\users\islam\documents\visual studio 2015\Projects\SohozDotCom\SohozDotCom\obj\Debug\SohozDotCom.csprojResolveAssemblyReference.cache
+c:\users\islam\documents\visual studio 2015\Projects\SohozDotCom\SohozDotCom\bin\Debug\SohozDotCom.exe
+c:\users\islam\documents\visual studio 2015\Projects\SohozDotCom\SohozDotCom\bin\Debug\SohozDotCom.pdb
+c:\users\islam\documents\visual studio 2015\Projects\SohozDotCom\SohozDotCom\bin\Debug\WebDriver.dll
+c:\users\islam\documents\visual studio 2015\Projects\SohozDotCom\SohozDotCom\bin\Debug\WebDriver.Support.dll
+c:\users\islam\documents\visual studio 2015\Projects\SohozDotCom\SohozDotCom\bin\Debug\WebDriver.xml
+c:\users\islam\documents\visual studio 2015\Projects\SohozDotCom\SohozDotCom\bin\Debug\WebDriver.Support.xml
+c:\users\islam\documents\visual studio 2015\Projects\SohozDotCom\SohozDotCom\obj\Debug\SohozDotCom.exe
+c:\users\islam\documents\visual studio 2015\Projects\SohozDotCom\SohozDotCom\obj\Debug\SohozDotCom.pdb
